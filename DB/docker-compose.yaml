@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2025-latest
+    container_name: gamestore_db_container
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=pinrmGQR29~9
+      - MSSQL_PID=Developer
+    volumes:
+      - sql_data:/var/opt/mssql
+    networks:
+      - gamestore_network
+
+networks:
+  gamestore_network:
+    driver: bridge
+
+volumes:
+  sql_data:
