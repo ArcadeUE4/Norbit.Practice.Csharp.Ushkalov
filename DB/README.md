@@ -43,6 +43,6 @@
 ---
 
 ## Запуск через Docker-compose
-Для поднятия сервера использовалась команда:
+Для запуска сервера использовалась команда:
 ```powershell 
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=pinrmGQR29~9" -p 1433:1433 -d [mcr.microsoft.com/mssql/server:2025-latest](https://mcr.microsoft.com/mssql/server:2025-latest)
