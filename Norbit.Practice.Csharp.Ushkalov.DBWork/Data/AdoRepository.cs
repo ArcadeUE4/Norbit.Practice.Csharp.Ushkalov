@@ -27,7 +27,7 @@ public class AdoRepository
             Console.WriteLine("\nОтчет по портфолио студий ");
             while (reader.Read())
             {
-                // Форматируем вывод под таблицу
+                // Форматируем вывод под таблицу.
                 Console.WriteLine($"Студия: {reader["Name"],-20}" +
                     $" | Выпущено игр: {reader["TotalGames"]}");
             }
@@ -41,7 +41,7 @@ public class AdoRepository
 
     public void BanPlayerAndResetBalance(string nickname)
     {
-        //Аннулироваание
+        //Аннулирование.
         string query = "UPDATE Players SET Balance = 0, " +
             "IsBanned = 1 " +
             "WHERE NickName = @nick";
@@ -56,7 +56,7 @@ public class AdoRepository
 
             int rowsAffected = cmd.ExecuteNonQuery();
 
-            // Даем обратную связь пользователю утилиты
+            // Даем обратную связь пользователю утилиты.
             if (rowsAffected > 0)
                 Console.WriteLine($"Аккаунт '{nickname}' " +
                     $"заблокирован, баланс списан.");

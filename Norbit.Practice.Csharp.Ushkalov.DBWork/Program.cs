@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Инициализация 
+        
         var config = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", 
@@ -17,11 +17,11 @@ class Program
             ?? throw new InvalidOperationException
             ("Строка подключения не найдена");
 
-        // Инициализация репозиториев 
+        
         var efRepo = new EfRepository(connectionString);
         var adoRepo = new AdoRepository(connectionString);
 
-        //  Главный цикл приложения
+        
         bool isRunning = true;
         while (isRunning)
         {

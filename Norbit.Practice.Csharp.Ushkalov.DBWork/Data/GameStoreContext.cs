@@ -22,7 +22,7 @@ namespace GameStoreConsole.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Предотвращает случайное удаление студий, если есть игры
+            // Предоврещаем удаление.
             modelBuilder.Entity<Game>()
                 .HasOne(g => g.Studio)
                 .WithMany(s => s.Games)
