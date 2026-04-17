@@ -22,7 +22,9 @@ createApp({
                 name: '',
                 code: '',
                 isActive: true
-            }
+            },
+            allTasks: [], 
+            newTask: { name: '', projectId: 0, isActive: true },
         };
     },
     computed: {
@@ -41,6 +43,7 @@ createApp({
         view(newVal) {
             if (newVal === 'projects') {
                 this.fetchProjects();
+                this.fetchAllTasks();
             }
         }
     },
@@ -111,6 +114,25 @@ createApp({
                 await this.fetchData();
             } catch (e) {
                 alert("Ошибка сохранения: " + (e.response?.data || e.message));
+            }
+        },
+
+        async fetchAllTasks() {
+            try {
+                const res = await axios.get('/api/tasks');
+                this.allTasks = res.data;
+            } catch (e) { console.error(e); }
+        },
+
+        async addTask() {
+            try {
+                // Отправляем на контроллер задач
+                await axios.post('/api/tasks', this.newTask);
+                this.newTask = { name: '', projectId: 0, isActive: true };
+                await this.fetchAllTasks(); // Обновляем таблицу
+                await this.fetchTasks();    // Обновляем выпадающий список в основной форме
+            } catch (e) {
+                alert("Ошибка при создании задачи");
             }
         },
 
