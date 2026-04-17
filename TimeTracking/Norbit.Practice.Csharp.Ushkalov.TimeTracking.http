@@ -1,0 +1,6 @@
+@Norbit.Practice.Csharp.Ushkalov.TimeTracking_HostAddress = http://localhost:5266
+
+GET {{Norbit.Practice.Csharp.Ushkalov.TimeTracking_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
