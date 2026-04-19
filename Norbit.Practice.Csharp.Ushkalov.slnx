@@ -2,5 +2,4 @@
   <Project Path="Collections/Norbit.Practice.Csharp.Ushkalov.Collections.csproj" />
   <Project Path="DBWork/Norbit.Practice.Csharp.Ushkalov.DBWork.csproj" Id="d051ebe6-a891-45b9-9047-72d17277da37" />
   <Project Path="OOP/Norbit.Practice.Csharp.Ushkalov.OOP.csproj" />
-  <Project Path="TimeTracking/Norbit.Practice.Csharp.Ushkalov.TimeTracking.csproj" Id="638edcc5-a754-490e-8a8e-c86469fa58dc" />
 </Solution>
