@@ -88,7 +88,7 @@
         var item = stack[100];
     }
 
-    catch (ArgumentOutOfRangeException ex)
+    catch (ArgumentOutOfRangeException)
     {
         Console.WriteLine($"Ожидаемая ошибка при неверном " +
             $"индексе поймана успешно.");

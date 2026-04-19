@@ -1,17 +1,15 @@
-﻿
-
-namespace GameStoreConsole.Models
+﻿namespace GameStoreConsole.Models
 {
     public class Genre
     {
         public Guid GenreID { get; set; }
-        public string GenreName { get; set; }
+        public string GenreName { get; set; } = string.Empty;
     }
 
     public class Studio
     {
         public Guid StudioID { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
         public DateTime? FoundationDate { get; set; }
         public decimal? AnnualRevenue { get; set; }
         public bool IsIndependent { get; set; }
@@ -34,7 +32,7 @@ namespace GameStoreConsole.Models
     public class Player
     {
         public Guid PlayerID { get; set; }
-        public string NickName { get; set; }
+        public string NickName { get; set; } = string.Empty;
         public decimal? Balance { get; set; }
         public DateTime? RegistrationDate { get; set; }
         public bool? IsBanned { get; set; }
