@@ -13,8 +13,7 @@
 Для работы приложения необходимо поднять контейнер с SQL Server. Выполни команду в терминале:
 
 ```powershell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=YourStrongPassword123!" -p 1433:1433 --name gamestore-db -d mcr.microsoft.com/mssql/server
-(Замените YourStrongPassword123! на ваш реальный пароль).
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=YourPassword!" -p 1433:1433 --name gamestore-db -d mcr.microsoft.com/mssql/server
 ```
 ## Подготовка структуры БД
 2. После запуска контейнера выполните SQL-скрипты через SSMS или Azure Data Studio:
